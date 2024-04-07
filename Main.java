@@ -11,11 +11,11 @@ public class Main {
             for (Circle circle : circles) {
             
                 double area = circle.getArea();
-                System.out.println("Pole powierzchni koła: " + area);
+                System.out.println("Pole_powierzchni_kola: " + area);
 
                 if (circle instanceof ColoredCircle) {
                     String color = ((ColoredCircle) circle).getColor();
-                    System.out.println("Kolor koła: " + color);
+                    System.out.println("Kolor_kola: " + color);
                 }
             }
     }
