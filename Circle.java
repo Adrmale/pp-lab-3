@@ -2,7 +2,7 @@
 
 public class Circle {
     private Point center;
-    private double radius;
+    private double radius:
 
     public Circle(Point center, double radius) {
         this.center = center;
