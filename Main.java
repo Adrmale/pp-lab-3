@@ -1,14 +1,17 @@
 
-    public class Main {
+public class Main {
     public static void main(String[] args) {
        
-        Point point = new Point(4.0, 6.0);
+        Point center = new Point(0, 0);
 
-       
-        System.out.println("Współrzędne punktu:");
-        System.out.println("x: " + point.getX());
-        System.out.println("y: " + point.getY());
+        
+        Circle circle = new Circle(center, 5);
+
+        
+        System.out.println("wyniki_kola:");
+        System.out.println("srodek_kola: (" + circle.getCenter().getX() + ", " + circle.getCenter().getY() + ")");
+        System.out.println("Promien: " + circle.getRadius());
+        System.out.println("Obwod kola: " + circle.calculatePerimeter());
+        System.out.println("pole_powierzchni_kola: " + circle.getArea());
     }
 }
-
-
