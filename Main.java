@@ -1,18 +1,23 @@
 
 public class Main {
     public static void main(String[] args) {
-        // Tworzenie obiektu klasy Point
-        Point center = new Point(0, 0);
+        
+        Circle[] circles = new Circle[3];
+        circles[0] = new Circle(new Point(1, 1), 2);
+        circles[1] = new Circle(new Point(2, 2), 6);
+        circles[2] = new ColoredCircle(new Point(3, 3), 4, "yellow");
 
-        // Tworzenie obiektu klasy ColoredCircle i inicjowanie go wartościami
-        ColoredCircle coloredCircle = new ColoredCircle(center, 5, "Red");
+        
+            for (Circle circle : circles) {
+            
+                double area = circle.getArea();
+                System.out.println("Pole powierzchni koła: " + area);
 
-        // Wyświetlanie właściwości koła
-        System.out.println("Wyniki_kola:");
-        System.out.println("Srodek_kola: (" + coloredCircle.getCenter().getX() + ", " + coloredCircle.getCenter().getY() + ")");
-        System.out.println("Promien: " + coloredCircle.getRadius());
-        System.out.println("Obwod_kola: " + coloredCircle.calculatePerimeter());
-        System.out.println("Pole_powierzchni_kola: " + coloredCircle.getArea());
-        System.out.println("Kolor_kola: " + coloredCircle.getColor());
+                if (circle instanceof ColoredCircle) {
+                    String color = ((ColoredCircle) circle).getColor();
+                    System.out.println("Kolor koła: " + color);
+                }
+            }
     }
 }
+
