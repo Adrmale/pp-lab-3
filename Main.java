@@ -4,7 +4,7 @@ public class Main {
 
         Rectangle rectangle = new Rectangle(6, 12);
         
-        System.out.println("Wyniki_kola:");
+        System.out.println("Wyniki:");
         System.out.println("Dlugosc: " + rectangle.getLength());
         System.out.println("Szerokosc: " + rectangle.getWidth());
         System.out.println("Pole_prostokata: " + rectangle.calculateArea());
